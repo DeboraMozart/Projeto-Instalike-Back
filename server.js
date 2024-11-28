@@ -3,7 +3,9 @@ import conectarAoBanco from "./src/config/dbConfig.js";
 import routes from "./src/routes/postsRoutes.js";
 
 
+
 const app = express(); // app vai representar o sevidor, entao quando formo pedir, "Servidpr, faça tal coisa", vai ser declarado o app
+app.use(express.static("uploads"));
 routes(app);
 //base de dados
 const post = [
